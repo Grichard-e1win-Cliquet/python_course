@@ -154,20 +154,20 @@
 # Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница. Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
 # 4 4 -> 2 2
 # 5 6 -> 2 3
-import math
-sum = int(input('The sum of two numbers equals: '))
-mp = int(input('The multiplicate of two numbers equals: '))
-D = sum * sum - (4 * mp)
-if D == 0:
-    x1 = sum // 2
-    x2 = x1
-    print(f'Peter think of {x1} and {x2}.')
-elif D > 0:
-    x1 = (sum + math.sqrt(D)) // 2
-    x2 = (sum - math.sqrt(D)) // 2
-    print(f'Peter think of {x1} and {x2}.')
-elif D < 0:
-    print('There is no solution with entered sum and mp.')
+# import math
+# sum = int(input('The sum of two numbers equals: '))
+# mp = int(input('The multiplicate of two numbers equals: '))
+# D = sum * sum - (4 * mp)
+# if D == 0:
+#     x1 = sum // 2
+#     x2 = x1
+#     print(f'Peter think of {x1} and {x2}.')
+# elif D > 0:
+#     x1 = (sum + math.sqrt(D)) // 2
+#     x2 = (sum - math.sqrt(D)) // 2
+#     print(f'Peter think of {x1} and {x2}.')
+# elif D < 0:
+#     print('There is no solution with entered sum and mp.')
 
 # task13
 
@@ -183,6 +183,21 @@ elif D < 0:
 #             max_count = count
 #         count = 0
 # print(f'Ottepel ebashila maximum {max_count} days.')
+
+# task14
+# Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+# 10 -> 1 2 4 8
+
+# N = int(input('Enter a number: '))
+# count = 0
+# res = 2 ** count
+# print(f'{N} -> ')
+
+# while res <= N:
+#     print(res, end=' ')
+#     count += 1
+#     res = 2 ** count
+# print('.')
 
 # task15
 
