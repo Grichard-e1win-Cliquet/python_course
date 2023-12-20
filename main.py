@@ -79,3 +79,18 @@
 #     print(f'{year} year is VISKIKUSNIIII!!!!')
 # else:
 #     print(f'{year} year isnt viskiKOSNII')
+
+# task8
+
+# Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
+# 3 2 4 -> yes
+# 3 2 1 -> no
+
+# a = int(input('Enter length of chocolate: '))
+# b = int(input('Enter width of chocolate: '))
+# c = int(input('Enter how many pieces you want: '))
+
+# if c % a == 0 or c % b == 0:
+#     print('Yes, you can to break off from chocolate ',c, 'pieces with one move.')
+# else:
+#     print('No, you cannot to break off from chocolate ',c, 'pieces with one move.')
