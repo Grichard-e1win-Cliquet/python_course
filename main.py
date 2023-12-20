@@ -129,3 +129,33 @@
 #         print('-1')
 # else:
 #     print('More than 1 idiot!')
+
+# task13
+
+# N = int(input('Enter quantity of days: '))
+# count = 0
+# max_count = 0
+# for i in range(N):
+#     temp = int(input("Enter temperature: "))
+#     if temp > 0:
+#         count += 1
+#     else:
+#         if max_count < count:
+#             max_count = count
+#         count = 0
+# print(f'Ottepel ebashila maximum {max_count} days.')
+
+# task15
+
+N = int(input('Enter quantity of watermelons: '))
+min = 0
+max = 0
+for i in range(N):
+    waterMelons = int(input("Enter a weight of watermelon: "))
+    if waterMelons > max:
+        max = waterMelons
+    if min == 0:
+        min = waterMelons
+    elif waterMelons < min:
+        min = waterMelons
+print(f'The heaviest watermelon weights {max} kilos, and lightiest weight {min}.')
