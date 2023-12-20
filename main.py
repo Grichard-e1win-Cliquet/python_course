@@ -16,7 +16,7 @@
 # 100 -> 1 (1 + 0 + 0)
 
 # num = int(input('Enter three digit number: '))
-# if num % 100 or num == 100:
+# if num // 100 != 0:
 #     sum = num % 10 + num // 10 % 10 + num // 100
 #     print("The sum of digits of number ", num , 'equals ', sum)
 # else:
@@ -53,6 +53,24 @@
 # else:
 #     print("The train has", a+b-1, "carriages")
 
+# task6
+# Вы пользуетесь общественным транспортом? Вероятно, вы расплачивались за проезд и получали билет с номером. Счастливым билетом называют такой билет с шестизначным номером, где сумма первых трех цифр равна сумме последних трех. Т.е. билет с номером 385916 – счастливый, т.к. 3+8+5=9+1+6. Вам требуется написать программу, которая проверяет счастливость билета.
+# 385916 -> yes
+# 123456 -> no
+
+# ticket = int(input('Enter a number of ticket: '))
+# if ticket // 100000 != 0:
+#     a = ticket % 1000
+#     b = ticket // 1000
+#     sumA = a % 10 + a // 10 % 10 + a // 100
+#     sumB = b % 10 + b // 10 % 10 + b // 100
+#     if sumA == sumB:
+#         print('Ticket ',ticket,' is happied.')
+#     else:
+#         print('Ticket ',ticket,' isn\'t happied.')
+# else:
+#     print('Enter a number of ticket!')
+    
 #task7
 
 # year = int(input("Enter the year: "))
