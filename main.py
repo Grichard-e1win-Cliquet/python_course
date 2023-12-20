@@ -107,6 +107,26 @@
 #     F *=  i
 # print(f'Fuctorial from {n} equals {F}.')
 
+# task10
+
+# На столе лежат n монеток. Некоторые из них лежат вверх решкой, а некоторые – гербом. Определите минимальное число монеток, которые нужно перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной. Выведите минимальное количество монет, которые нужно перевернуть.
+# 5 -> 1 0 1 1 0
+# 2
+
+# N = int(input('Enter quantity of coins: '))
+# eagle = 0
+# face = 0
+# for i in range(N):
+#     coin = int(input("Enter a side of coin: "))
+#     if coin > 0:
+#         eagle += 1
+#     else:
+#         face += 1
+# if eagle > face:
+#     print(f'Minimum coins to reverse equals {face}')
+# else:
+#     print(f'Minimum coins to reverse equals {eagle}')
+
 # task11
 
 # Дано А > 1. Определить, каким по счету числом фибоначи является А. Если А не явл-ся числом Фибоначи, выведите -1.
@@ -130,6 +150,25 @@
 # else:
 #     print('More than 1 idiot!')
 
+# task12
+# Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница. Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
+# 4 4 -> 2 2
+# 5 6 -> 2 3
+import math
+sum = int(input('The sum of two numbers equals: '))
+mp = int(input('The multiplicate of two numbers equals: '))
+D = sum * sum - (4 * mp)
+if D == 0:
+    x1 = sum // 2
+    x2 = x1
+    print(f'Peter think of {x1} and {x2}.')
+elif D > 0:
+    x1 = (sum + math.sqrt(D)) // 2
+    x2 = (sum - math.sqrt(D)) // 2
+    print(f'Peter think of {x1} and {x2}.')
+elif D < 0:
+    print('There is no solution with entered sum and mp.')
+
 # task13
 
 # N = int(input('Enter quantity of days: '))
@@ -147,15 +186,15 @@
 
 # task15
 
-N = int(input('Enter quantity of watermelons: '))
-min = 0
-max = 0
-for i in range(N):
-    waterMelons = int(input("Enter a weight of watermelon: "))
-    if waterMelons > max:
-        max = waterMelons
-    if min == 0:
-        min = waterMelons
-    elif waterMelons < min:
-        min = waterMelons
-print(f'The heaviest watermelon weights {max} kilos, and lightiest weight {min}.')
+# N = int(input('Enter quantity of watermelons: '))
+# min = 0
+# max = 0
+# for i in range(N):
+#     waterMelons = int(input("Enter a weight of watermelon: "))
+#     if waterMelons > max:
+#         max = waterMelons
+#     if min == 0:
+#         min = waterMelons
+#     elif waterMelons < min:
+#         min = waterMelons
+# print(f'The heaviest watermelon weights {max} kilos, and lightiest weight {min}.')
