@@ -31,6 +31,18 @@
 # # table = print("We need minimum", math.ceil((a+b+c)/2), "tables")
 # table = print("We need minimum", ((a+1)//2 + (b+1)//2 + (c+1)//2), "tables")
 
+# task4
+
+# Петя, Катя и Сережа делают из бумаги журавликов. Вместе они сделали S журавликов. Сколько журавликов сделал каждый ребенок, если известно, что Петя и Сережа сделали одинаковое количество журавликов, а Катя сделала в два раза больше журавликов, чем Петя и Сережа вместе?
+# 6 -> 1 4 1
+# 24 -> 4 16 4
+# 60 -> 10 40 10
+
+# sum = int(input('Enter a total number of paper cranes: '))
+# a = b = sum // 6
+# c = 4 * a
+# print('Peter and Serge makes ',a, 'cranes each, and Kate makes ', c, 'cranes.')
+
 # task5
 
 # a = int(input("In which carriage from the head Michael sat? "))
