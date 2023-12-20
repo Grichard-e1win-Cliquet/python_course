@@ -90,7 +90,42 @@
 # b = int(input('Enter width of chocolate: '))
 # c = int(input('Enter how many pieces you want: '))
 
-# if c % a == 0 or c % b == 0:
+# if c < a * b and (c % a == 0 or c % b == 0):
 #     print('Yes, you can to break off from chocolate ',c, 'pieces with one move.')
 # else:
 #     print('No, you cannot to break off from chocolate ',c, 'pieces with one move.')
+
+# task9
+
+# решить задачу факториал циклом while 
+
+# n = int(input('Enter a number: '))
+# i = 1
+# F = 1
+# while i < n:
+#     i+=1
+#     F *=  i
+# print(f'Fuctorial from {n} equals {F}.')
+
+# task11
+
+# Дано А > 1. Определить, каким по счету числом фибоначи является А. Если А не явл-ся числом Фибоначи, выведите -1.
+
+# A = int(input('Enter a number more than 1: '))
+# if A > 1:
+#     i = 1
+#     iP = 0
+#     iN = 0
+#     n = 2
+
+#     while iN < A:
+#         iN = iP + i
+#         n += 1
+#         iP = i
+#         i = iN
+#     if iN == A:
+#         print(f'The number {A} is {n} number in Fibonacci list.')
+#     else:
+#         print('-1')
+# else:
+#     print('More than 1 idiot!')
