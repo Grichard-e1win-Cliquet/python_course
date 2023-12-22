@@ -214,6 +214,32 @@
 #         min = waterMelons
 # print(f'The heaviest watermelon weights {max} kilos, and lightiest weight {min}.')
 
+# task16
+# Требуется вычислить, сколько раз встречается некоторое число X в массиве A[1..N]. Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. В последующих строках записаны N целых чисел Ai. Последняя строка содержит число X
+# n = 5
+# 1 2 3 4 5
+# x = 3
+
+# -> 1
+import random
+
+A = list()
+n = int(input('Enter quantity of elements in massive: '))
+print('n = ', n)
+
+for i in range(n):
+    A.append(random.randint(1,10))
+print('Massive A = ', A)
+
+x = int(input('Enter a number which we going to find: '))
+print('x = ', x)
+count = 0
+
+for i in range(len(A)):
+    if A[i] == x:
+        count += 1
+print('->', count)
+
 # task17
 # Дан список чисел. Определите, сколько в нем
 # встречается различных чисел.
@@ -313,10 +339,12 @@
 # Input: [0, -1, 5, 2, 3]
 # Output: 2 (-1 < 5, 2 < 3)
 
-array = [0, -1, 5, 2, 3, 4, 5, 1, 2, -1, 0]
-count = 0
-for i in range(1, len(array)):
-    if array[i] > array[i-1]:
-        count += 1
-print('quantity of numbers more than previous equals: ', count)
+# array = [0, -1, 5, 2, 3, 4, 5, 1, 2, -1, 0]
+# count = 0
+# for i in range(1, len(array)):
+# # for i in range(len(array) - 1):
+# #     if array[i] < array[i+1]:
+#     if array[i] > array[i-1]:
+#         count += 1
+# print('quantity of numbers more than previous equals: ', count)
 
