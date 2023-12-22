@@ -213,3 +213,44 @@
 #     elif waterMelons < min:
 #         min = waterMelons
 # print(f'The heaviest watermelon weights {max} kilos, and lightiest weight {min}.')
+
+# task17
+# Дан список чисел. Определите, сколько в нем
+# встречается различных чисел.
+# Input: [1, 1, 2, 0, -1, 3, 4, 4]
+# Output: 6
+
+# A = input().split()
+# for i in range(len(A)):
+#     A[i] = int(A[i])
+
+# A = list(map(int, input().split()))
+# print(A)
+# print(len(set(A))) #делает из списка множество, а во множестве не может быть повторяющихся элементов
+# B = list()
+
+# #Вариант решения через создание доп списка
+# # for i in A:
+# #     if i not in B:
+# #         B.append(i)
+# # print(B)
+# # print(len(B))
+
+# print('The list has',len(set(A)),'different elements')
+
+# task19
+# Дана последовательность из N целых чисел и число
+# K. Необходимо сдвинуть всю последовательность
+# (сдвиг - циклический) на K элементов вправо, K –
+# положительное число.
+# Input: [1, 2, 3, 4, 5] k = 3
+# Output: [4, 5, 1, 2, 3]
+
+A = list(map(int, input().split()))
+K = int(input('Enter how many first elements need to move to the end: '))
+print(A)
+for i in range(K):
+    A.append(A[0])
+    A.pop(0)
+
+print(A)
