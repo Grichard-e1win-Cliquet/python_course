@@ -241,16 +241,42 @@
 # task19
 # Дана последовательность из N целых чисел и число
 # K. Необходимо сдвинуть всю последовательность
-# (сдвиг - циклический) на K элементов вправо, K –
+# (сдвиг - циклический) на K элементов вправо, K –1
 # положительное число.
 # Input: [1, 2, 3, 4, 5] k = 3
 # Output: [4, 5, 1, 2, 3]
 
 A = list(map(int, input().split()))
 K = int(input('Enter how many first elements need to move to the end: '))
-print(A)
-for i in range(K):
-    A.append(A[0])
-    A.pop(0)
+# print(A)
+# # for i in range(K):
+# #     A.append(A[0])
+# #     A.pop(0)
 
-print(A)
+K = K % len(A)
+B = list()
+
+for i in range(K):
+    B.append(A[len(A) - K + i])
+
+for i in range(len(A) - K):
+    B.append(A[i])
+print(B)
+
+# for i in range(K):
+#     A.insert(0, A.pop(-1))
+
+# print(A)
+
+# task21
+# Напишите программу для печати всех уникальных
+# значений в словаре.
+# Input: [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
+# {"VI": "S005"}, {"VII": " S005 "}, {" V ":" S009 "}, {" VIII
+# ":" S007 "}]
+# Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
+
+# dictionary = {"V": "S001", "V": "S002", "VI": "S001",
+# "VI": "S005", "VII": "S005", "V": "S009", "VIII": "S007"}
+
+# print(set(dictionary.items(v)))
