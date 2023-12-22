@@ -221,24 +221,24 @@
 # x = 3
 
 # -> 1
-import random
+# import random
 
-A = list()
-n = int(input('Enter quantity of elements in massive: '))
-print('n = ', n)
+# A = list()
+# n = int(input('Enter quantity of elements in massive: '))
+# print('n = ', n)
 
-for i in range(n):
-    A.append(random.randint(1,10))
-print('Massive A = ', A)
+# for i in range(n):
+#     A.append(random.randint(1,10))
+# print('Massive A = ', A)
 
-x = int(input('Enter a number which we going to find: '))
-print('x = ', x)
-count = 0
+# x = int(input('Enter a number which we going to find: '))
+# print('x = ', x)
+# count = 0
 
-for i in range(len(A)):
-    if A[i] == x:
-        count += 1
-print('->', count)
+# for i in range(len(A)):
+#     if A[i] == x:
+#         count += 1
+# print('->', count)
 
 # task17
 # Дан список чисел. Определите, сколько в нем
@@ -263,6 +263,45 @@ print('->', count)
 # # print(len(B))
 
 # print('The list has',len(set(A)),'different elements')
+
+# task18
+# Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. В последующих строках записаны N целых чисел Ai. Последняя строка содержит число X
+
+# n = 5
+# 1 2 3 4 5
+# x = 6
+# -> 5
+
+# import random
+# import math
+
+# A = list()
+# n = int(input('Enter quantity of elements in massive: '))
+# print('n = ', n)
+
+# for i in range(n):
+#     A.append(random.randint(-10,10))
+# print('Massive A = ', A)
+
+# x = int(input('Enter a number which we going to find neariest: '))
+# print('x = ', x)
+
+# closest = A[0]
+# if x >= A[0]:
+#     diff = x - A[0]
+# else:
+#     diff = A[0] - x
+
+# for i in range(1, len(A)):
+#     if x >= A[i]:
+#         if x - A[i] <= diff:
+#             diff = x - A[i]
+#             closest = A[i]
+#     else:
+#         if A[i] - x <= diff:
+#             diff = A[i] - x
+#             closest = A[i]
+# print('->', closest)
 
 # task19
 # Дана последовательность из N целых чисел и число
