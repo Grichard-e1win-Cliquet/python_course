@@ -246,22 +246,22 @@
 # Input: [1, 2, 3, 4, 5] k = 3
 # Output: [4, 5, 1, 2, 3]
 
-A = list(map(int, input().split()))
-K = int(input('Enter how many first elements need to move to the end: '))
+# A = list(map(int, input().split()))
+# K = int(input('Enter how many first elements need to move to the end: '))
 # print(A)
 # # for i in range(K):
 # #     A.append(A[0])
 # #     A.pop(0)
 
-K = K % len(A)
-B = list()
+# K = K % len(A)
+# B = list()
 
-for i in range(K):
-    B.append(A[len(A) - K + i])
+# for i in range(K):
+#     B.append(A[len(A) - K + i])
 
-for i in range(len(A) - K):
-    B.append(A[i])
-print(B)
+# for i in range(len(A) - K):
+#     B.append(A[i])
+# print(B)
 
 # for i in range(K):
 #     A.insert(0, A.pop(-1))
@@ -276,7 +276,31 @@ print(B)
 # ":" S007 "}]
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
-# dictionary = {"V": "S001", "V": "S002", "VI": "S001",
-# "VI": "S005", "VII": "S005", "V": "S009", "VIII": "S007"}
+dictionary = [ {"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
+{"VI": "S005"}, {"VII": "S005"}, {" V ":"S009"}, {" VIII":"S007"}] 
+print('Original list: ', dictionary)
 
-# print(set(dictionary.items(v)))
+newdict = set(val for dic in dictionary for val in dic.values())
+print('Unique values: ', newdict)
+
+nD = set ()
+for i in dictionary:
+    # print('i = ', i)
+    for j in i:
+        # print('j = ', j)
+        # print('i[j] = ',i[j])
+        nD.add(i[j])
+print(nD)
+
+# вариант со списками
+
+dict2 = list()
+for i in dictionary:
+    for j in i:
+        dict2.append(i[j])
+
+result = list()
+for i in dict2:
+    if i not in result:
+        result.append(i)
+print(result)
