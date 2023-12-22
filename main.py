@@ -276,31 +276,47 @@
 # ":" S007 "}]
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
-dictionary = [ {"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
-{"VI": "S005"}, {"VII": "S005"}, {" V ":"S009"}, {" VIII":"S007"}] 
-print('Original list: ', dictionary)
+# dictionary = [ {"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
+# {"VI": "S005"}, {"VII": "S005"}, {" V ":"S009"}, {" VIII":"S007"}] 
+# print('Original list: ', dictionary)
 
-newdict = set(val for dic in dictionary for val in dic.values())
-print('Unique values: ', newdict)
+# newdict = set(val for dic in dictionary for val in dic.values())
+# print('Unique values: ', newdict)
 
-nD = set ()
-for i in dictionary:
-    # print('i = ', i)
-    for j in i:
-        # print('j = ', j)
-        # print('i[j] = ',i[j])
-        nD.add(i[j])
-print(nD)
+# nD = set ()
+# for i in dictionary:
+#     # print('i = ', i)
+#     for j in i:
+#         # print('j = ', j)
+#         # print('i[j] = ',i[j])
+#         nD.add(i[j])
+# print(nD)
 
-# вариант со списками
+# # вариант со списками
 
-dict2 = list()
-for i in dictionary:
-    for j in i:
-        dict2.append(i[j])
+# dict2 = list()
+# for i in dictionary:
+#     for j in i:
+#         dict2.append(i[j])
 
-result = list()
-for i in dict2:
-    if i not in result:
-        result.append(i)
-print(result)
+# result = list()
+# for i in dict2:
+#     if i not in result:
+#         result.append(i)
+# print(result)
+
+# task23
+# Дан массив, состоящий из целых чисел. Напишите
+# программу, которая подсчитает количество
+# элементов массива, больших предыдущего (элемента
+# с предыдущим номером)
+# Input: [0, -1, 5, 2, 3]
+# Output: 2 (-1 < 5, 2 < 3)
+
+array = [0, -1, 5, 2, 3, 4, 5, 1, 2, -1, 0]
+count = 0
+for i in range(1, len(array)):
+    if array[i] > array[i-1]:
+        count += 1
+print('quantity of numbers more than previous equals: ', count)
+
