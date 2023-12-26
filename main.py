@@ -492,22 +492,35 @@
 # Input: a a a b c a a d c d d
 # Output: a a_1 a_2 b c a_3 a_4 d c_1 d_1 d_2
 
-stroka = 'e k l m n o p r e e k e e l m o a'
-list_1 = list(stroka.split())
-print(list_1)
-print(len(list_1))
+# stroka = 'a b a b a c c a'
+# list_1 = list(stroka.split())
+# print(list_1)
+# print(len(list_1))
 
-for i in range(len(list_1)):
-    count = 0
-    for j in range(len(list_1)):
-        if list_1[i] == list_1[j]:
-            count += 1
-            if count > 1:
-                list_1[j] = list_1[j] + '_' + str(count - 1)
-            else:
-                list_1[j] = list_1[j]
+# for i in range(len(list_1)):
+#     count = 0
+#     for j in range(len(list_1)):
+#         if list_1[i] == list_1[j]:
+#             count += 1
+#             if count > 1:
+#                 list_1[j] = list_1[j] + '_' + str(count - 1)
+#             else:
+#                 list_1[j] = list_1[j]
 
-print(list_1)
+# print(list_1)
+
+# text = input().split()
+# text1 = {}
+# for i in text:
+#     if i in text1:
+#         text1[i] += 1
+#         print(f'{i}_{text1[i]}', end=' ')
+#     else:
+#         print(i, end=' ')
+#         text1[i] = 0
+# print(type(text1))
+    
+
 
 # task27
 # Пользователь вводит текст(строка). Словом считается
@@ -520,6 +533,20 @@ print(list_1)
 # shells on the sea shore I'm sure that the shells are sea
 # shore shells
 # Output: 13
+
+text = 'She sells sea shells on the sea shore The shells that she sells are sea shells I\'m sure So if she sells sea shells on the sea shore I\'m sure that the shells are sea shore shells'.split()
+count = set()
+words = 0
+for i in text:
+    if i.lower() not in count:
+        count.add(i.lower())
+        words += 1
+print(words)
+print(count)
+print(len(count))
+
+# print(len(set(text.lower().split())))
+
 
 # task29
 
