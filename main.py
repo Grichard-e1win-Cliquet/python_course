@@ -447,21 +447,26 @@
 # 2 4 6 8 10 12 10 8 6 4 2
 # 3 6 9 12 15 18
 # 6 12
+# import random
 
-n , m = map(int, input('Enter a qunatity of two lists: ').split())
-print('n =',n, 'm =',m)
+# n , m = map(int, input('Enter a qunatity of two lists: ').split())
+# print('n =',n, 'm =',m)
 
-a = list()
-b = list()
+# a = list()
+# b = list()
 
-for i in range(n):
-    a.append(input('enter a number for first list: '))
-for i in range(m):
-    b.append(input('enter a number for second list: '))
+# for i in range(n):
+#     a.append(random.randint(-10,11))
+# for i in range(m):
+#     b.append(random.randint(-10,11))
+# # for i in range(n):
+# #     a.append(input('enter a number for first list: '))
+# # for i in range(m):
+# #     b.append(input('enter a number for second list: '))
 
-c = set(a).intersection(set(b))
-
-print(c)
+# c = set(a).intersection(set(b))
+# print(a, b)
+# print(c)
 
 
 
@@ -500,6 +505,24 @@ print(c)
 # заданной во входном файле грядки.
 # 4 -> 1 2 3 4
 # 9
+
+# import random
+
+# n = random.randint(4, 11)
+# print('We have',n,'spots with berries.')
+# spots = list()
+
+# for i in range(n):
+#     spots.append(random.randint(1, 15))
+# print(spots)
+
+# max = spots[-2] + spots[-1] + spots[0]
+
+# for i in range(len(spots)-1):
+#     if spots[i] + spots[-1] + spots[+1] > max:
+#         max = spots[i] + spots[-1] + spots[+1]
+
+# print('Max we could pick from the spots is',max,'kilos')
 
 # task25
 # Напишите программу, которая принимает на вход
