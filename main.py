@@ -448,6 +448,23 @@
 # 3 6 9 12 15 18
 # 6 12
 
+n , m = map(int, input('Enter a qunatity of two lists: ').split())
+print('n =',n, 'm =',m)
+
+a = list()
+b = list()
+
+for i in range(n):
+    a.append(input('enter a number for first list: '))
+for i in range(m):
+    b.append(input('enter a number for second list: '))
+
+c = set(a).intersection(set(b))
+
+print(c)
+
+
+
 
 # task23
 # Дан массив, состоящий из целых чисел. Напишите
@@ -534,16 +551,16 @@
 # shore shells
 # Output: 13
 
-text = 'She sells sea shells on the sea shore The shells that she sells are sea shells I\'m sure So if she sells sea shells on the sea shore I\'m sure that the shells are sea shore shells'.split()
-count = set()
-words = 0
-for i in text:
-    if i.lower() not in count:
-        count.add(i.lower())
-        words += 1
-print(words)
-print(count)
-print(len(count))
+# text = 'She sells sea shells on the sea shore The shells that she sells are sea shells I\'m sure So if she sells sea shells on the sea shore I\'m sure that the shells are sea shore shells'.split()
+# count = set()
+# words = 0
+# for i in text:
+#     if i.lower() not in count:
+#         count.add(i.lower())
+#         words += 1
+# print(words)
+# print(count)
+# print(len(count))
 
 # print(len(set(text.lower().split())))
 
