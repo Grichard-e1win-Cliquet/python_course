@@ -620,3 +620,64 @@
 #  if max_number < n:
 #  n = max_number
 # print(n)
+
+#task 1461
+# import random
+
+# n = int(input('Quantity of balls: '))
+# balls = list()
+# count = 1
+# q = 0
+# balls.append(random.randint(0, 9))
+
+# for i in range(1, n):
+#     if count < 3:
+#         x = random.randint(0, 9)
+#         if x == balls[i - 1]:
+#             count += 1
+#             q = 2
+#             balls.append(x)
+#         else:
+#             count = 1
+#             balls.append(x)
+#     else:
+#         x = random.randint(0, 9)
+#         if x != balls[i - 1] or x != balls[i - 2]:
+#             balls.append(x)
+#         else:
+#             i -= 1
+#             n += 1
+# print(balls)
+
+# if q == 2 and count != 3:
+#     while q < 3:
+#         for i in range(1, len(balls)):
+#             if balls[i] == balls[i - 1]:
+#                 q += 1
+#                 balls.insert(i, balls[i])
+#                 break
+# if q == 0:
+#     x = random.randint(0, len(balls)-1)
+#     balls.insert(x, balls[x])
+#     balls.insert(x, balls[x])
+# print(balls)
+
+# removed = 0
+# for i in range(len(balls) - 2):
+#     if len(balls) >= i + 2:
+#         if balls[i] == balls[i + 1] == balls[i + 2]:
+#             if len(balls) >= i + 3 and balls[i] == balls[i + 3]:
+#                 balls.pop(i)
+#                 balls.pop(i)
+#                 balls.pop(i)
+#                 balls.pop(i)
+#                 i = 0
+#                 removed += 4
+#             else:
+#                 balls.pop(i)
+#                 balls.pop(i)
+#                 balls.pop(i)
+#                 i = 0
+#                 removed += 3
+# print(balls)
+# print(removed)
