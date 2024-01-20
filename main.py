@@ -567,6 +567,15 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
+# def step(a,b):
+#     if b == 0:
+#         return 1
+#     else:
+#         return a * step(a,b-1)
+
+# x, y = map(int, input().split())
+# print(step(x, y))
+
 # task27
 # Пользователь вводит текст(строка). Словом считается
 # последовательность непробельных символов идущих
@@ -600,6 +609,14 @@
 # 2 2
 # 4
 
+def sum(a,b):
+    if b == 0:
+        return a
+    else:
+        return sum(a+1,b-1)
+
+x, y = map(int, input().split())
+print(sum(x, y))
 
 # task29
 
@@ -683,19 +700,19 @@
 # Input: 5
 # Output: yes
 
-n = int(input('Enter a number: '))
+# n = int(input('Enter a number: '))
 
-def prime(n):
-    i = 2
-    flag = True
-    while i < n // 2 + 1 and flag:
-        if n % i == 0:
-            flag = False
-        i += 1
-    if flag:
-        return print(n,'is a natural number.')
-    return print(n,'isnt a natural number.')
-prime(n)
+# def prime(n):
+#     i = 2
+#     flag = True
+#     while i < n // 2 + 1 and flag:
+#         if n % i == 0:
+#             flag = False
+#         i += 1
+#     if flag:
+#         return print(n,'is a natural number.')
+#     return print(n,'isnt a natural number.')
+# prime(n)
 
 # task37
 # Дано натуральное число N и
@@ -707,6 +724,15 @@ prime(n)
 # (даже для ввода и вывода).
 # Input: 2 -> 3 4
 # Output: 4 3
+
+# def mass(n):
+#     if n == 0:
+#         return ''
+#     x = int(input())
+#     return mass(n - 1) + f' {x}'
+
+# print(mass(int(input())))
+
 #task 1461
 # import random
 
