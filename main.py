@@ -819,6 +819,42 @@
 # Ввод: Вывод:
 # 1 2 3 2 3 2
 
+# from collections import Counter
+
+# list1 = list(map(int, input('Enter numbers in list separated by space: ').split()))
+# print(list1)
+# dictionary = Counter(list1)
+# count = 0
+# for key, values in dictionary.items():
+#     if int(values) // 2 >= 1:
+#         count += int(values) // 2
+# print(count)
+
+# pair = 0
+# i = 0
+# while i < len(list1):
+#     j = i + 1
+#     while j < len(list1):
+#         if list1[i] == list1[j]:
+#             list1.pop(j)
+#             list1.pop(i)
+#             pair += 1
+#             i = 0
+#             j = 0
+#         j += 1
+#     i += 1
+
+# print(pair)
+
+# for i in range(len(list1)-1):
+#     for j in range(1, len(list1)):
+#         if list1[i] == list1[j]:
+#             list1.remove(list1[j])
+#             list1.remove(list1[i])
+#             i = 0
+#             j = 1
+# print(list1)
+
 #task45
 # Два различных натуральных числа n и m называются
 # дружественными, если сумма делителей числа n
@@ -836,6 +872,31 @@
 # пару не дает).
 # Ввод: Вывод:
 # 300 220 284
+k = False
+while k == False:
+    k = int(input('Enter a number less than 100 000: '))
+    if k > 100000:
+        print('Less than 100 000, idiot!')
+        k = False
+
+sum1 = 0
+sum2 = 0
+list1 = []
+
+for i in range(2, k + 1):
+    for j in range(1, i):
+        if i % j == 0 and sum1+j <= k:
+            sum1 += j
+        if j == i - 1:
+            for n in range(1, sum1):
+                if sum1 % n == 0 and sum2+n < k:
+                    sum2 += n
+            if sum2 == i and sum1 != i and i not in list1 and sum1 not in list1:
+                print('answer is','i= ',i, 'sum1 = ',sum1)
+                list1.append(i)
+                list1.append(sum1)
+    sum1 = 0
+    sum2 = 0
 
 #task 1461
 # import random
