@@ -879,24 +879,24 @@ while k == False:
         print('Less than 100 000, idiot!')
         k = False
 
-sum1 = 0
-sum2 = 0
-list1 = []
+# sum1 = 0
+# sum2 = 0
+# list1 = []
 
-for i in range(2, k + 1):
-    for j in range(1, i // 2 + 1):
-        if i % j == 0 and sum1+j <= k:
-            sum1 += j
-        if j == i // 2:#- 1:
-            for n in range(1, sum1):
-                if sum1 % n == 0 and sum2+n < k:
-                    sum2 += n
-            if sum2 == i and sum1 != i and i not in list1 and sum1 not in list1:
-                print('answer is','i= ',i, 'sum1 = ',sum1)
-                list1.append(i)
-                list1.append(sum1)
-    sum1 = 0
-    sum2 = 0
+# for i in range(2, k + 1):
+#     for j in range(1, i // 2 + 1):
+#         if i % j == 0 and sum1+j <= k:
+#             sum1 += j
+#         if j == i // 2:#- 1:
+#             for n in range(1, sum1):
+#                 if sum1 % n == 0 and sum2+n < k:
+#                     sum2 += n
+#             if sum2 == i and sum1 != i and i not in list1 and sum1 not in list1:
+#                 print('answer is','i= ',i, 'sum1 = ',sum1)
+#                 list1.append(i)
+#                 list1.append(sum1)
+#     sum1 = 0
+#     sum2 = 0
 
 # def list_n(num):
 #     summa = 0
@@ -911,6 +911,23 @@ for i in range(2, k + 1):
 #         div_j = list_n(j)
 #         if div_j == i and div_i == j and i != j:
 #             print(i,j)
+
+def div_list(number: int)-> dict:
+    div_dict = {}
+    for j in range(1, number):
+        summa_div = 0
+        for i in range(1, j):
+            if j%i == 0:
+                summa_div += i
+        div_dict[j] = summa_div
+    return div_dict
+
+div_dict = div_list(k)
+
+for i in range(1, k):
+    for j in range(i+1, k):
+        if i == div_dict.get(j) and j == div_dict.get(i): #and i != j:
+            print(i,j)
 
 #task 1461
 # import random
