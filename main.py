@@ -872,31 +872,31 @@
 # пару не дает).
 # Ввод: Вывод:
 # 300 220 284
-# k = False
-# while k == False:
-#     k = int(input('Enter a number less than 100 000: '))
-#     if k > 100000:
-#         print('Less than 100 000, idiot!')
-#         k = False
+k = False
+while k == False:
+    k = int(input('Enter a number less than 100 000: '))
+    if k > 100000:
+        print('Less than 100 000, idiot!')
+        k = False
 
-# sum1 = 0
-# sum2 = 0
-# list1 = []
+sum1 = 0
+sum2 = 0
+list1 = []
 
-# for i in range(2, k + 1):
-#     for j in range(1, i):
-#         if i % j == 0 and sum1+j <= k:
-#             sum1 += j
-#         if j == i - 1:
-#             for n in range(1, sum1):
-#                 if sum1 % n == 0 and sum2+n < k:
-#                     sum2 += n
-#             if sum2 == i and sum1 != i and i not in list1 and sum1 not in list1:
-#                 print('answer is','i= ',i, 'sum1 = ',sum1)
-#                 list1.append(i)
-#                 list1.append(sum1)
-#     sum1 = 0
-#     sum2 = 0
+for i in range(2, k + 1):
+    for j in range(1, i // 2 + 1):
+        if i % j == 0 and sum1+j <= k:
+            sum1 += j
+        if j == i // 2:#- 1:
+            for n in range(1, sum1):
+                if sum1 % n == 0 and sum2+n < k:
+                    sum2 += n
+            if sum2 == i and sum1 != i and i not in list1 and sum1 not in list1:
+                print('answer is','i= ',i, 'sum1 = ',sum1)
+                list1.append(i)
+                list1.append(sum1)
+    sum1 = 0
+    sum2 = 0
 
 # def list_n(num):
 #     summa = 0
