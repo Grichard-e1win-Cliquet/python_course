@@ -765,25 +765,26 @@
 # чисел - элементы массива. Затем число M - количество
 # элементов во втором массиве. Затем элементы второго массива
 # Ввод: Вывод:
-# 7 3 3 2 12
+# 7 
 # 3 1 3 4 2 4 12
 # 6
-# 4 15 43 1 15 1 (каждое число вводится с новой строки)
+# 4 15 43 1 15 1 
+# 3 3 2 12 (каждое число вводится с новой строки)
 
-list1 = [int(input('Enter a number: ')) for i in range(int(input('Enter quantity of numbers in list: ')))]
-print(list1)
-list2 = [int(input('Enter a number: ')) for i in range(int(input('Enter quantity of numbers in list: ')))]
-print(list2)
+# list1 = [int(input('Enter a number: ')) for i in range(int(input('Enter quantity of numbers in list: ')))]
+# print(list1)
+# list2 = [int(input('Enter a number: ')) for i in range(int(input('Enter quantity of numbers in list: ')))]
+# print(list2)
 
-listCross = list()
+# listCross = list()
 
-for i in range(len(list1)):
-    exist = False
-    if list1[i] not in list2:
-        exist = True
-    if exist:
-        listCross.append(list1[i])
-print(listCross)
+# for i in range(len(list1)):
+#     exist = False
+#     if list1[i] not in list2:
+#         exist = True
+#     if exist:
+#         listCross.append(list1[i])
+# print(listCross)
 
 #task41
 # Дан массив, состоящий из целых чисел. Напишите
@@ -799,6 +800,14 @@ print(listCross)
 # Вывод: Вывод:
 # 0 2
 # (каждое число вводится с новой строки)
+
+# list1 = [int(input('Enter a number: ')) for i in range(int(input('Enter a quantity of numbers in list: ')))]
+# count = 0
+# print(list1)
+# for i in range(1, len(list1)-1):
+#     if list1[i] > list1[i-1] and list1[i] > list1[i+1]:
+#         count += 1
+# print(count)
 
 #task43
 # Дан список чисел. Посчитайте, сколько в нем пар
