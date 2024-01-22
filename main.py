@@ -663,6 +663,15 @@
 # Ввод: 7 2 5
 # Вывод: 7 9 11 13 15
 
+# a1, diff, quantity = map(int, input('Enter first element, diff and quantity in progression: ').split())
+# print(f'an = {a1}', '+ (n - 1) *',quantity)
+
+# list1 = []
+# list1.append(a1)
+
+# for i in range(2, quantity + 1):
+#     list1.append(a1 + (i - 1) * diff)
+# print(list1)
 
 #task 31
 # Последовательностью Фибоначчи называется
@@ -872,12 +881,12 @@
 # пару не дает).
 # Ввод: Вывод:
 # 300 220 284
-k = False
-while k == False:
-    k = int(input('Enter a number less than 100 000: '))
-    if k > 100000:
-        print('Less than 100 000, idiot!')
-        k = False
+# k = False
+# while k == False:
+#     k = int(input('Enter a number less than 100 000: '))
+#     if k > 100000:
+#         print('Less than 100 000, idiot!')
+#         k = False
 
 # sum1 = 0
 # sum2 = 0
@@ -912,22 +921,22 @@ while k == False:
 #         if div_j == i and div_i == j and i != j:
 #             print(i,j)
 
-def div_list(number: int)-> dict:
-    div_dict = {}
-    for j in range(1, number):
-        summa_div = 0
-        for i in range(1, j):
-            if j%i == 0:
-                summa_div += i
-        div_dict[j] = summa_div
-    return div_dict
+# def div_list(number: int)-> dict:
+#     div_dict = {}
+#     for j in range(1, number):
+#         summa_div = 0
+#         for i in range(1, j):
+#             if j%i == 0:
+#                 summa_div += i
+#         div_dict[j] = summa_div
+#     return div_dict
 
-div_dict = div_list(k)
+# div_dict = div_list(k)
 
-for i in range(1, k):
-    for j in range(i+1, k):
-        if i == div_dict.get(j) and j == div_dict.get(i): #and i != j:
-            print(i,j)
+# for i in range(1, k):
+#     for j in range(i+1, k):
+#         if i == div_dict.get(j) and j == div_dict.get(i): #and i != j:
+#             print(i,j)
 
 #task 1461
 # import random
