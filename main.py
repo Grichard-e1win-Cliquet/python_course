@@ -656,9 +656,7 @@
 # прогрессии. Её первый элемент, разность и количество
 # элементов нужно ввести с клавиатуры. Формула для
 # получения n-го члена прогрессии: a
-# n
-#  = a1
-#  + (n-1) * d.
+# n = a1 + (n-1) * d.
 # Каждое число вводится с новой строки.
 # Ввод: 7 2 5
 # Вывод: 7 9 11 13 15
@@ -947,6 +945,75 @@
 #         if i == div_dict.get(j) and j == div_dict.get(i): #and i != j:
 #             print(i,j)
 
+#task47
+# У вас есть код, который вы не можете менять (так часто бывает, когда код в глубине
+# программы используется множество раз и вы не хотите ничего сломать):
+# transformation = <???>
+# values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29] # или любой другой список
+# transormed_values = list(map(transformation, values))
+# Единственный способ вашего взаимодействия с этим кодом - посредством задания
+# функции transformation.
+# Однако вы поняли, что для вашей текущей задачи вам не нужно никак преобразовывать
+# список значений, а нужно получить его как есть.
+# Напишите такое лямбда-выражение transformation, чтобы transformed_values получился
+# копией values.
+
+# transformation = lambda x: x
+
+# values = [2, 3, 4, 5, 13, 1, '15']
+# transformed_values = list(map(transformation, values))
+
+# if values == transformed_values:
+#     print('ok')
+# else:
+#     print('fail')
+
+#task49
+# Задача №49. Решение в группах
+# Планеты вращаются вокруг звезд по эллиптическим орбитам.
+# Назовем самой далекой планетой ту, орбита которой имеет
+# самую большую площадь. Напишите функцию
+# find_farthest_orbit(list_of_orbits), которая среди списка орбит
+# планет найдет ту, по которой вращается самая далекая
+# планета. Круговые орбиты не учитывайте: вы знаете, что у
+# вашей звезды таких планет нет, зато искусственные спутники
+# были были запущены на круговые орбиты. Результатом
+# функции должен быть кортеж, содержащий длины полуосей
+# эллипса орбиты самой далекой планеты. Каждая орбита
+# представляет из себя кортеж из пары чисел - полуосей ее
+# эллипса. Площадь эллипса вычисляется по формуле S = pi*a*b,
+# где a и b - длины полуосей эллипса. При решении задачи
+# используйте списочные выражения. Подсказка: проще всего
+# будет найти эллипс в два шага: сначала вычислить самую
+# большую площадь эллипса, а затем найти и сам эллипс,
+# имеющий такую площадь. Гарантируется, что самая далекая
+# планета ровно одна
+# Пример ввода и вывода данных представлены на
+# следующем слайде
+orbits = [(1,3), (2.5,10), (7,2), (6,6), (4,3)]
+
+# def ABC(tulip: orbits): 
+#     Orb = list(filter(lambda x: x[0] != x[1], orbits))
+#     P_O = list(map(lambda x: x[0] * x[1], Orb))
+#     max_O = P_O.index(max(P_O))
+#     return Orb[max_O]
+def ABC(tulip: orbits): 
+    return max(orbits, key = lambda x: (x[0] != x[1]) * x[0] * x[1])
+print(*ABC(orbits))
+# res = list(filter(lambda x: x % 10 == 5, data))
+# def FFA(orbits):
+#     max_S = 0
+#     max_C = 0
+
+#     for i in range(len(orbits)):
+#         a, b = map(int, orbits[i])
+#         if a != b and a * b > max_S:
+#             max_S = a * b
+#             max_C = i
+#     return orbits[max_C]
+
+# print(*FFA(orbits))
+
 #task 1461
 # import random
 
@@ -1037,3 +1104,55 @@
 # sum = sum(i for i in list1 if i > 0)
 
 # print(sum, Pr)
+
+# import random
+
+# a = random.randint(-10, 11)
+# b = random.randint(-10, 11)
+# print(a,b)
+
+# print(int(not '-' in str(a-b)))
+
+# list1 = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = list()
+# for i in list1:
+#     if i % 2 == 0:
+#         print(f'({i}, {i**2})', end=', ')
+# for i in list1:
+#     if i % 2 == 0:
+#         res.append((i, i**2))
+        
+# print(res)
+
+# list1 = [1, 2, 3, 5, 8, 15, 23, 38]
+
+# def select(f, col):
+#     return [f(x) for x in col]
+
+# def where(f, col):
+#     return [x for x in col if f(x)] 
+
+# res = select(int, list1)
+# print(res)
+# res = where(lambda x: x % 2 == 0, res)
+# print(res)
+# res = list(select(lambda x: (x, x**2), res))
+# print(res)
+
+# list_1 = [x for x in range(1, 20)]
+# print(list_1)
+
+# list_1 = list(map(lambda x: x + 10, list_1))
+# print(list_1)
+
+# data = '15 142 12 241 23 23 5321'
+# print(data)
+
+# data = list(map(int, data.split()))
+# print(data)
+
+# data = [15, 65, 9, 36, 175]
+
+# res = list(filter(lambda x: x % 10 == 5, data))
+# print(res)
+

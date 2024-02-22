@@ -250,3 +250,35 @@ def merge_sort(nums):
 list1 = [1,5,6,9,8,7,2,1,55,2,4]
 merge_sort(list1)
 print(list1)
+
+def f(x):
+    return x*x
+a = f
+print(f(5))
+
+def calk1(a):
+    return a+a
+# calk1 = lambda a,b: a + b
+
+def calk2(a):
+    return a*a
+
+def math(op, x):
+    print(op(x))
+
+math(calk1, 5)
+
+colors = ['red', 'green', 'blue']
+data = open('file.txt', 'a') # указываем режим работы
+data.writelines(colors) # разделителей не будет
+data.close()
+
+with open('file.txt', 'w') as data:
+    data.write('line 1\n')
+    data.write('line 2\n')
+
+path = 'file.txt'
+data = open('file.txt', 'r')
+for line in data:
+    print(line)
+data.close()
