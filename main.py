@@ -732,6 +732,43 @@
 #         A[i] = min
 # print(A)
 
+#task34
+# Винни-Пух попросил Вас посмотреть, есть ли в его стихах ритм. 
+# Поскольку разобраться в его кричалках не настолько просто, 
+# насколько легко он их придумывает, Вам стоит написать программу. 
+# Винни-Пух считает, что ритм есть, если число слогов (т.е. число гласных букв)
+# в каждой фразе стихотворения одинаковое. Фраза может состоять из одного слова,
+# если во фразе несколько слов, то они разделяются дефисами. 
+# Фразы отделяются друг от друга пробелами. Стихотворение Винни-Пух вбивает в 
+# программу с клавиатуры. В ответе напишите “Парам пам-пам”, если с ритмом все
+# в порядке и “Пам парам”, если с ритмом все не в порядке
+
+# Ввод:
+# пара-ра-рам рам-пам-папам па-ра-па-дам
+# Вывод:
+# Парам пам-пам
+
+rap = list(map(list, input('enter weeny pooh\'s rap: ').split()))
+
+for i in range(len(rap)):
+    for j in rap[i]:
+        rap[i] = list(filter(lambda x: x == 'a', rap[i]))
+
+beat = bool
+
+for i in range(len(rap) - 1):
+    if len(rap[i]) != len(rap[i + 1]):
+        beat = False
+        break
+    else:
+        beat = True
+
+if beat == True:
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
+
 #task35
 # Напишите функцию, которая принимает одно число и
 # проверяет, является ли оно простым
@@ -990,16 +1027,17 @@
 # планета ровно одна
 # Пример ввода и вывода данных представлены на
 # следующем слайде
-orbits = [(1,3), (2.5,10), (7,2), (6,6), (4,3)]
+# orbits = [(1,3), (2.5,10), (7,2), (6,6), (4,3)]
 
 # def ABC(tulip: orbits): 
 #     Orb = list(filter(lambda x: x[0] != x[1], orbits))
 #     P_O = list(map(lambda x: x[0] * x[1], Orb))
 #     max_O = P_O.index(max(P_O))
 #     return Orb[max_O]
-def ABC(tulip: orbits): 
-    return max(orbits, key = lambda x: (x[0] != x[1]) * x[0] * x[1])
-print(*ABC(orbits))
+# def ABC(tulip: orbits): 
+#     return max(orbits, key = lambda x: (x[0] != x[1]) * x[0] * x[1])
+
+# print(*ABC(orbits))
 # res = list(filter(lambda x: x % 10 == 5, data))
 # def FFA(orbits):
 #     max_S = 0
@@ -1013,6 +1051,31 @@ print(*ABC(orbits))
 #     return orbits[max_C]
 
 # print(*FFA(orbits))
+
+#task51
+# Напишите функцию same_by(characteristic, objects), которая
+# проверяет, все ли объекты имеют одинаковое значение
+# некоторой характеристики, и возвращают True, если это так.
+# Если значение характеристики для разных объектов
+# отличается - то False. Для пустого набора объектов, функция
+# должна возвращать True. Аргумент characteristic - это
+# функция, которая принимает объект и вычисляет его
+# характеристику.
+# Ввод: Вывод:
+# values = [0, 2, 10, 6] same
+# if same_by(lambda x: x % 2, values):
+# print(‘same’)
+# else:
+# print(‘different’)
+
+# def same_by(func, coll):
+#     return len(list(filter(func, coll))) == 0
+
+# values = [0, 2, 10, 7]
+# if same_by(lambda x: x % 2, values):
+#     print('same')
+# else:
+#     print('different')
 
 #task 1461
 # import random
